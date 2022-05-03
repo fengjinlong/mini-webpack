@@ -21,10 +21,17 @@ var _foo = require("./foo.js");
 
 var _bar = require("./bar.js");
 
+var _user = require("./user.json");
+
+var _user2 = _interopRequireDefault(_user);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 console.log("来自 main.js 文件");
 (0, _foo.foo)();
-(0, _bar.bar)('main 里面执行 bar'); 
-     }, {"./foo.js":1,"./bar.js":2}],
+(0, _bar.bar)('main 里面执行 bar');
+console.log(_user2.default); 
+     }, {"./foo.js":1,"./bar.js":2,"./user.json":3}],
   
     "1": [function (require, module, exports) {
       "use strict";
@@ -41,7 +48,7 @@ function foo() {
 }
 
 (0, _bar.bar)('foo 里面执行 bar'); 
-     }, {"./bar.js":3}],
+     }, {"./bar.js":4}],
   
     "2": [function (require, module, exports) {
       "use strict";
@@ -57,6 +64,15 @@ function bar(str) {
      }, {}],
   
     "3": [function (require, module, exports) {
+      "use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = "{\"username\":\"fjl\",\"age\":18,\"work\":\"farmer\"}"; 
+     }, {}],
+  
+    "4": [function (require, module, exports) {
       "use strict";
 
 Object.defineProperty(exports, "__esModule", {

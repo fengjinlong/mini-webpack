@@ -85,3 +85,7 @@ function foojs(require, module, exports) {
 
 
 ```
+
+## loader 匹配到相应的类型，执行指定的js，为了把js文件转换成js文件，交给 webpack 处理
+
+## 插件原理是基于事件机制（钩子函数），webpack 执行过程中，派发事件。插件监听事件，处理参数
